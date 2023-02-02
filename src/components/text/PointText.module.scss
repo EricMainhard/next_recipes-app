@@ -1,0 +1,16 @@
+.circle{
+    position: relative;
+    &::before{
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    p{
+        margin-left: 2rem;
+    }
+}

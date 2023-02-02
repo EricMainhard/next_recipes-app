@@ -1,0 +1,9 @@
+.text{
+    font-size: 2rem;
+    &__primary{
+        color: var(--text-color);
+    }
+    &__secondary{
+        color: var(--background-color);
+    }
+}

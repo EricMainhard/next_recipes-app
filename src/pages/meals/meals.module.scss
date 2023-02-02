@@ -1,0 +1,35 @@
+.mealsContainer{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5rem;
+    justify-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 2rem 0;
+}
+
+.info{
+    position: relative;
+    align-items: flex-start;
+    gap: 2rem;
+    a{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 0px 3px 1px lightgrey;
+        svg{
+        font-size: 3rem;
+        }
+    }
+    .heartIcon{
+        vertical-align: middle;
+        margin-right: .5rem;
+    }
+}

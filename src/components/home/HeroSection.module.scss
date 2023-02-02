@@ -1,0 +1,18 @@
+.heroInfo{
+    color: var(--white);
+}
+.heroTitle{
+    font-size: 6rem;
+}
+.heroImage{
+    border-radius: 1rem;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.heroButtons{
+    gap: 2rem;
+    margin-top: 2rem;
+}

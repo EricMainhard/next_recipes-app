@@ -1,0 +1,24 @@
+.about{
+    margin: 5rem auto;
+    background-color: var(--text-color-light);
+    padding: 2rem;
+    border-radius: 2rem;
+    width: fit-content;
+    cursor: pointer;
+    .content{
+        p{
+            display: none;
+        }
+    }
+    &[data-isOpen=true]{
+        background: none;
+        border: 2px solid var(--text-color-light);
+        width: 100%;
+        .content{
+            p{
+                margin-top: 2rem;
+                display: block;
+            }
+        }
+    }
+}

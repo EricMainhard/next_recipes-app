@@ -1,0 +1,9 @@
+.title{
+    font-size: 3rem;
+    &.title__primary{
+        color: var(--primary-color);
+    }
+    &.title__secondary{
+        color: var(	--text-color-light);
+    }
+}

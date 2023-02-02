@@ -1,0 +1,29 @@
+.table{
+    width: 100%;
+    margin: 5rem 0;
+}
+
+.tableHead{
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.tableRow{
+    transition: .3s ease;
+    color: var(--text-color-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    &:nth-of-type(even){
+        color: var(--background-color);
+        background-color: var(--text-color-light);
+    }
+    &:hover{
+        transition: .3s ease;
+        background-color: #e85d0470;
+        color: var(--text-color-light);
+    }
+    td{
+        padding: .5rem;
+    }
+}

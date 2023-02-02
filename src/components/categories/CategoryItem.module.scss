@@ -1,0 +1,18 @@
+.category{
+    cursor: pointer;
+}
+
+.categoryTitle{
+    font-size: 1.5rem;
+    text-align: left;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.categoryImage{
+    object-fit: contain;
+}
+
+.selected{
+    background-color: #9f9f9f50;
+}
