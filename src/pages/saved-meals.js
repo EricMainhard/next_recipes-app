@@ -46,12 +46,12 @@ const SavedMeals = () => {
                 loading={isLoading}
                 size={150}
                 cssOverride={{ margin: "2rem 0" }}
-                key={data.idMeal}
+                key={index}
               />
             );
           }
-          if (isLoading) {
-            return <Text key={data.idMeal}> Something went wrong, please try again. </Text>;
+          if (isError) {
+            return <Text key={index}> Something went wrong, please try again. </Text>;
           }
           return (
             <div className={`flex justify_between row ${style.card}`} key={data.idMeal}>
