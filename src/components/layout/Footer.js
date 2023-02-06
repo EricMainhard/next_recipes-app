@@ -11,7 +11,7 @@ export const Footer = () => {
             Find the perfect meal recipe for you.
         </Text>
         <Text className={style.copyright}>
-        "MyMeals" © 2023 | All rights reserved
+        &quot;MyMeals&quot; &copy; 2023 | All rights reserved
         </Text>
         </footer>
     )

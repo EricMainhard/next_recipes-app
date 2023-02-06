@@ -28,6 +28,7 @@ const SavedMeals = () => {
   }, []);
 
   const queries = savedMealsID?.map((id) => ({
+    key: id,
     queryKey: ["singleMeal", id],
     queryFn: getMealById,
   }));
