@@ -10,6 +10,9 @@ const nextConfig = {
         pathname: '/images/**',
       },
     ],
+  },
+  eslint: {  
+    ignoreDuringBuilds: true,
   }
 }
 
