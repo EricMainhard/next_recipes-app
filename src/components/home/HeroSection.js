@@ -47,7 +47,7 @@ export const HeroSection = () => {
                         <ButtonWithLink link='/meals' variant='primary'>
                             Explore Meals
                         </ButtonWithLink>
-                        <ButtonWithLink link='/meals'>
+                        <ButtonWithLink link='/saved-meals'>
                             Saved Meals
                         </ButtonWithLink>
                     </div>

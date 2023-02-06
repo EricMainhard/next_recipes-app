@@ -1,8 +1,7 @@
 .about{
     margin: 5rem auto;
-    background-color: var(--text-color-light);
+    border-bottom: 2px solid var(--text-color-light);
     padding: 2rem;
-    border-radius: 2rem;
     width: fit-content;
     cursor: pointer;
     .content{
@@ -14,6 +13,7 @@
         background: none;
         border: 2px solid var(--text-color-light);
         width: 100%;
+        border-radius: 2rem;
         .content{
             p{
                 margin-top: 2rem;

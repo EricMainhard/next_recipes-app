@@ -15,9 +15,9 @@ export const ButtonWithLink = ({link = '/', children, variant = 'secondary'}) =>
     )
 }
 
-export const Button = ({children, variant = 'secondary', onClick }) => {
+export const Button = ({children, variant = 'secondary', onClick, className }) => {
     return (    
-        <button className={`flex ${clsx(style.button, style[`variant__${variant}`])}`} onClick={onClick}>
+        <button className={`flex ${className} ${clsx(style.button, style[`variant__${variant}`], style[className])}`} onClick={onClick}>
             {children}
         </button>
     )

@@ -10,7 +10,7 @@ export const Ingredients = ({ingredients}) => {
                 </thead>
                 <tbody className={style.tableBody}>
                     {ingredients.map( ing => (
-                        <tr key={ing.key} className={style.tableRow}>
+                        <tr key={ing.index} className={style.tableRow}>
                             <td>{ ing.ingredient }</td>
                             <td>{ ing.measure }</td>
                         </tr>

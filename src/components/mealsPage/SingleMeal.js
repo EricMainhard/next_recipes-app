@@ -5,7 +5,7 @@ import style from './SingleMeal.module.scss';
 import { motion } from 'framer-motion';
 import { Title } from '../text/Title';
 
-export const SingleMeal = ({ meal, i }) => {
+export const SingleMeal = ({ meal, i, optionToRemove }) => {
 
     return (
         <Link href={`/meals/${meal.idMeal}`}>

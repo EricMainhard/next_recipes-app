@@ -6,4 +6,51 @@
     font-size: 1.5rem;
     gap: 1rem;
     color: white;
+    display: none;
+}
+.menuIcon{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.menuDrawer{
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    color: white;
+    z-index: 2;
+    svg{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+}
+
+.drawerLinks{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    margin: 0 auto;
+    li{
+        font-size: 4rem;
+        padding: 2rem 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navLinks{
+        display: flex;
+    }
+    .menuIcon{
+        display: none;
+    }
 }

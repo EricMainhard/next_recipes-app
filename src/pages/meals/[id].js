@@ -6,7 +6,6 @@ import { Text } from "@/components/text/Text";
 import { Ingredients } from "@/components/mealsPage/Ingredients";
 import { PointText } from "@/components/text/PointText";
 import Image from "next/image";
-import Link from "next/link";
 import { toast } from "react-hot-toast";
 import style from "./meals.module.scss";
 import BarLoader from "react-spinners/BarLoader";
@@ -14,6 +13,11 @@ import ButtonWithLink, { Button } from "@/components/buttons/Button";
 import { BsYoutube } from "react-icons/bs";
 import { FaHeart, FaHeartBroken } from "react-icons/fa";
 import { useState, useEffect } from "react";
+
+export const getMealById = async ({queryKey}) => {
+  const { data } = await axios.get(`/lookup.php?i=${queryKey[1]}`);
+  return data?.meals[0];
+};
 
 const SingleMealPage = () => {
   const router = useRouter();
@@ -23,12 +27,12 @@ const SingleMealPage = () => {
 
   const handleSaveMeal = (id) => {
     if (localStorage.getItem("savedMeals")) {
-      let savedMeals = Array.from(JSON.parse(localStorage.getItem("savedMeals")));
+      let savedMeals = JSON.parse(localStorage.getItem("savedMeals"));
       if (isSaved) {
-        savedMeals.filter((meal) => meal != id);
-        localStorage.setItem("savedMeals", JSON.stringify(savedMeals));
+        let filterMeals = savedMeals.filter(savedMeal => savedMeal !== id);
+        localStorage.setItem("savedMeals", JSON.stringify(filterMeals));
         setIsSaved(false);
-        toast.success("Meal removed successfully");
+        toast.error("Meal removed successfully");
       } else {
         savedMeals.push(id);
         localStorage.setItem("savedMeals", JSON.stringify(savedMeals));
@@ -36,7 +40,7 @@ const SingleMealPage = () => {
         toast.success("Meal saved successfully");
       }
     } else {
-      localStorage.setItem("savedMeals", JSON.stringify(id));
+      localStorage.setItem("savedMeals", JSON.stringify([id]));
       setIsSaved(true);
       toast.success("Meal saved successfully");
     }
@@ -52,11 +56,6 @@ const SingleMealPage = () => {
       }
     }
   }, [id]);
-
-  const getMealById = async () => {
-    const { data } = await axios.get(`/lookup.php?i=${id}`);
-    return data?.meals[0];
-  };
 
   const {
     data: meal,
@@ -100,7 +99,8 @@ const SingleMealPage = () => {
           <Title>{meal.strMeal}</Title>
           <PointText>Category: {meal.strCategory}</PointText>
           <PointText>Area: {meal.strArea}</PointText>
-          <Button variant="primary" onClick={() => handleSaveMeal(id)}>
+          <Text className="greenText">{ isSaved ? 'This meal is already saved' : ''}</Text>
+          <Button variant="primary" onClick={() => handleSaveMeal(id)} className="row">
             {isSaved ? (
               <>
                 <FaHeartBroken className={style.heartIcon} />

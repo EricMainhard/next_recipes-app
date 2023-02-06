@@ -1,8 +1,9 @@
 .heroInfo{
     color: var(--white);
+    align-self: flex-start;
 }
 .heroTitle{
-    font-size: 6rem;
+    font-size: 4rem;
 }
 .heroImage{
     border-radius: 1rem;
@@ -14,5 +15,14 @@
 }
 .heroButtons{
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .heroTitle{
+        font-size: 6rem;
+    }
+    .heroInfo{
+        align-self: unset;
+    }
 }

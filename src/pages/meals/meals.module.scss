@@ -8,8 +8,10 @@
 
 .grid{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     margin: 2rem 0;
+    gap: 2rem;
+    align-items: center;
 }
 
 .info{
@@ -17,7 +19,7 @@
     align-items: flex-start;
     gap: 2rem;
     a{
-        position: absolute;
+        position: relative;
         top: 0;
         right: 0;
         display: flex;
@@ -31,5 +33,16 @@
     .heartIcon{
         vertical-align: middle;
         margin-right: .5rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .grid{
+        grid-template-columns: 1fr 2fr;
+    }
+    .info{
+        a{
+            position: absolute;
+        }
     }
 }

@@ -13,6 +13,10 @@
 .variant__secondary {
 	background-color: var(--secondary-color);
 }
+.deleteIcon{
+	position: absolute;
+	top: 0;
+}
 
 @media only screen and (max-width: 768px) {
 	.button {
