@@ -6,7 +6,11 @@ export const Ingredients = ({ingredients}) => {
         <div>
             <table className={style.table}>
                 <thead className={style.tableHead}>
-                    <Title variant="secondary">Ingredients:</Title>
+                    <tr>
+                    <td colSpan={3}>
+                        <Title variant="secondary">Ingredients:</Title>
+                    </td>
+                    </tr>
                 </thead>
                 <tbody className={style.tableBody}>
                     {ingredients.map( ing => (

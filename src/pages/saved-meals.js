@@ -38,23 +38,12 @@ const SavedMeals = () => {
   return (
     <div className={style.savedMealsContainer}>
       {result.length > 0 ? (
-        result.map(({ data, isLoading, isError }, index) => {
-          if (isLoading) {
-            return (
-              <BarLoader
-                color="white"
-                loading={isLoading}
-                size={150}
-                cssOverride={{ margin: "2rem 0" }}
-                key={index}
-              />
-            );
-          }
-          if (isError) {
-            return <Text key={index}> Something went wrong, please try again. </Text>;
-          }
+        result.map(({ data }) => { 
           return (
-            <div className={`flex justify_between row ${style.card}`} key={data.idMeal}>
+            <div
+              className={`flex justify_between row ${style.card}`}
+              key={data.idMeal}
+            >
               <div className={style.cardInfo}>
                 <Title variant="secondary">{data.strMeal}</Title>
                 <PointText>{data.strCategory}</PointText>
@@ -76,7 +65,7 @@ const SavedMeals = () => {
                 </Button>
               </div>
             </div>
-          );
+          )
         })
       ) : (
         <Text>You have no items in your list.</Text>
