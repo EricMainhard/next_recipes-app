@@ -7,7 +7,7 @@ import {
 import axios from "axios";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
-import { Layout } from "@/components/layout/layout";
+import { Layout } from "@/components/layout/Layout";
 import '@/styles/globals.scss';
 
 axios.defaults.baseURL = "https://www.themealdb.com/api/json/v1/1";
