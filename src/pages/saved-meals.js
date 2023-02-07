@@ -42,23 +42,23 @@ const SavedMeals = () => {
           return (
             <div
               className={`flex justify_between row ${style.card}`}
-              key={data.idMeal}
+              key={data?.idMeal}
             >
               <div className={style.cardInfo}>
-                <Title variant="secondary">{data.strMeal}</Title>
-                <PointText>{data.strCategory}</PointText>
-                <PointText>{data.strArea}</PointText>
+                <Title variant="secondary">{data?.strMeal}</Title>
+                <PointText>{data?.strCategory}</PointText>
+                <PointText>{data?.strArea}</PointText>
               </div>
               <div
                 className={`flex align_center column justify_between ${style.cardActions}`}
               >
-                <ButtonWithLink link={`/meals/${data.idMeal}`}>
+                <ButtonWithLink link={`/meals/${data?.idMeal}`}>
                   <BsEye />
                 </ButtonWithLink>
                 <Button
                   variant="primary"
                   onClick={() => {
-                    handleRemoveMeal(data.idMeal);
+                    handleRemoveMeal(data?.idMeal);
                   }}
                 >
                   <BsTrashFill />
